@@ -1,6 +1,6 @@
 [
   {
-    "id": "tile_001",
+    "id": "1",
     "title": "Ocean Blue Ceramic Tile",
     "description": "Glossy ocean blue ceramic tile for modern interior walls",
     "image": "https://besttile.com/media/image/10146/ocean-blue.jpg?size=800",
@@ -12,7 +12,7 @@
     "inStock": true
   },
   {
-    "id": "tile_002",
+    "id": "2",
     "title": "White Marble Elegance Tile",
     "description": "Premium white marble tile with natural vein texture",
     "image": "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=600&q=80",
@@ -24,7 +24,7 @@
     "inStock": true
   },
   {
-    "id": "tile_003",
+    "id": "3",
     "title": "Rustic Terracotta Floor Tile",
     "description": "Earth-toned terracotta tile for rustic styled spaces",
     "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
@@ -36,7 +36,7 @@
     "inStock": true
   },
   {
-    "id": "tile_004",
+    "id": "4",
     "title": "Grey Minimal Porcelain Tile",
     "description": "Matte grey porcelain tile for minimalist designs",
     "image": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?w=600&q=80",
@@ -48,7 +48,7 @@
     "inStock": false
   },
   {
-    "id": "tile_005",
+    "id": "5",
     "title": "Moroccan Pattern Art Tile",
     "description": "Decorative Moroccan geometric patterned ceramic tile",
     "image": "https://images.unsplash.com/photo-1569152811536-fb47aced8409?w=600&q=80",
@@ -60,7 +60,7 @@
     "inStock": true
   },
   {
-    "id": "tile_006",
+    "id": "6",
     "title": "Black Stone Luxury Tile",
     "description": "Dark black stone finish tile for premium interiors",
     "image": "https://images.unsplash.com/photo-1567225557594-88d73e55f2cb?w=600&q=80",
@@ -72,7 +72,7 @@
     "inStock": true
   },
   {
-    "id": "tile_007",
+    "id": "7",
     "title": "Beige Sandstone Tile",
     "description": "Soft beige sandstone tile with natural texture",
     "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80",
@@ -84,7 +84,7 @@
     "inStock": true
   },
   {
-    "id": "tile_008",
+    "id": "8",
     "title": "Green Mosaic Ceramic Tile",
     "description": "Vibrant green mosaic tile for decorative walls",
     "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80",
@@ -96,7 +96,7 @@
     "inStock": true
   },
   {
-    "id": "tile_009",
+    "id": "9",
     "title": "Luxury Gold Accent Tile",
     "description": "Premium gold accent tile for luxury interior design",
     "image": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=600&q=80",
@@ -108,7 +108,7 @@
     "inStock": false
   },
   {
-    "id": "tile_010",
+    "id": "10",
     "title": "Modern Wood Finish Tile",
     "description": "Wood-textured porcelain tile with natural look finish",
     "image": "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=600&q=80",
@@ -120,7 +120,7 @@
     "inStock": true
   },
   {
-    "id": "tile_011",
+    "id": "11",
     "title": "Slate Grey Stone Tile",
     "description": "Natural slate grey stone tile with a raw matte finish for industrial interiors",
     "image": "https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=600&q=80",
@@ -132,7 +132,7 @@
     "inStock": true
   },
   {
-    "id": "tile_012",
+    "id": "12",
     "title": "Ivory Travertine Tile",
     "description": "Classic ivory travertine tile with subtle natural pitting and warm tones",
     "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80",
@@ -144,7 +144,7 @@
     "inStock": true
   },
   {
-    "id": "tile_013",
+    "id": "13",
     "title": "Cobalt Blue Zellige Tile",
     "description": "Handcrafted cobalt blue Moroccan zellige tile with irregular faceted surface",
     "image": "https://www.porcelainsuperstore.co.uk/cdn/shop/products/Dwell-China-02.jpg?v=1657571702&width=1200",
@@ -156,7 +156,7 @@
     "inStock": true
   },
   {
-    "id": "tile_014",
+    "id": "14",
     "title": "Charcoal Hexagon Tile",
     "description": "Modern charcoal hexagon porcelain tile for contemporary bathroom floors",
     "image": "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?w=600&q=80",
@@ -168,7 +168,7 @@
     "inStock": true
   },
   {
-    "id": "tile_015",
+    "id": "15",
     "title": "Sage Green Ceramic Tile",
     "description": "Soft sage green ceramic tile with a subtle glaze for kitchen backsplashes",
     "image": "https://tiletopia.com/cdn/shop/files/MOD-CEL-258Tiletopia.jpg?v=1776420524&width=1946",
@@ -180,7 +180,7 @@
     "inStock": true
   },
   {
-    "id": "tile_016",
+    "id": "16",
     "title": "Rose Gold Metallic Tile",
     "description": "Glamorous rose gold metallic finish tile for feature walls and luxury bathrooms",
     "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
@@ -192,7 +192,7 @@
     "inStock": true
   },
   {
-    "id": "tile_017",
+    "id": "17",
     "title": "Cream Limestone Floor Tile",
     "description": "Warm cream limestone tile with a honed finish ideal for open plan living spaces",
     "image": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80",
@@ -204,7 +204,7 @@
     "inStock": false
   },
   {
-    "id": "tile_018",
+    "id": "18",
     "title": "Midnight Black Marble Tile",
     "description": "Dramatic midnight black marble tile with fine white veining for bold interiors",
     "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600&q=80",
@@ -216,7 +216,7 @@
     "inStock": true
   },
   {
-    "id": "tile_019",
+    "id": "19",
     "title": "Terracotta Encaustic Tile",
     "description": "Hand-painted encaustic terracotta tile with geometric folk patterns",
     "image": "https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=80",
@@ -228,7 +228,7 @@
     "inStock": true
   },
   {
-    "id": "tile_020",
+    "id": "20",
     "title": "White Subway Ceramic Tile",
     "description": "Timeless white subway ceramic tile with a gloss finish for kitchens and bathrooms",
     "image": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80",
