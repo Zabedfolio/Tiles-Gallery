@@ -1,12 +1,14 @@
 import Image from "next/image";
 
 const TilesDetailsPage = async ({ params }) => {
-  const { id } = params;
+    console.log(params,"params")
+  const { id } = await params;
+  
 
   const res = await fetch('https://tiles-gallery-zabedfolio.vercel.app/data/products.json');
   const data = await res.json();
 
-  const tile = data.find(item => item.id === id);
+  const tile = data.find(item => item.id == id);
 
   if (!tile) {
     return <p>Tile not found</p>;
