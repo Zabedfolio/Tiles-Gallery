@@ -41,10 +41,10 @@ const NavBar = () => {
                 {/* Desktop Buttons */}
                 <div className="hidden md:flex gap-4">
                     <div className="flex items-center  text-sm gap-4">
-                        <button className='btn bg-[#5a00ff]  text-white'>
+                        <button className='btn bg-[#5a00ff]  text-white rounded-lg'>
                             <Link href={"/signup"}>SignUp</Link>
                         </button>
-                        <button className='btn bg-[#5a00ff]  text-white'>
+                        <button className='btn bg-[#5a00ff]  text-white rounded-lg'>
                             <Link href={"/signin"}>SignIn</Link>
                         </button>
                     </div>
@@ -71,10 +71,10 @@ const NavBar = () => {
                         <li><Link href={"/profile"} onClick={() => setMenuOpen(false)}>Profile</Link></li>
                     </ul>
                     <div className="flex gap-3">
-                        <button className='btn bg-[#5a00ff] text-white'>
+                        <button className='btn bg-[#5a00ff] text-white rounded-lg'>
                             <Link href={"/signup"} onClick={() => setMenuOpen(false)}>SignUp</Link>
                         </button>
-                        <button className='btn bg-[#5a00ff] text-white'>
+                        <button className='btn bg-[#5a00ff] text-white rounded-lg'>
                             <Link href={"/signin"} onClick={() => setMenuOpen(false)}>SignIn</Link>
                         </button>
                     </div>
