@@ -2,7 +2,7 @@
 import { Button } from "@heroui/react";
 import Link from "next/link";
 import Image from "next/image";
-import banner from "@/assets/hero-banner.png";
+import banner from "@/assets/hero-banner.jpg";
 import { motion } from "framer-motion";
 
 const Banner = () => {
