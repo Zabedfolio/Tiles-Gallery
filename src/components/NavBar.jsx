@@ -35,14 +35,14 @@ const NavBar = () => {
                 </ul>
 
                 <div className="flex gap-4">
-                    <ul className="flex items-center  text-sm gap-4">
+                    <div className="flex items-center  text-sm gap-4">
                         <button className='btn bg-[#5a00ff]  text-white'>
                             <Link href={"/signup"}>SignUp</Link>
                         </button>
                         <button className='btn bg-[#5a00ff]  text-white'>
                             <Link href={"/signin"}>SignIn</Link>
                         </button>
-                    </ul>
+                    </div>
                 </div>
             </nav>
         </div>
