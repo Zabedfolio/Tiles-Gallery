@@ -13,8 +13,12 @@ import {
     Label,
     TextField,
 } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
+
+    const router = useRouter();
+
     const onSubmit = async (e) => {
         e.preventDefault();
 
@@ -31,6 +35,10 @@ export default function SignUpPage() {
             image: image,
             callbackURL: '/',
         });
+
+        if(!error){
+            router.push('/');
+        }
         // console.log({data,error})
         if (error) {
             toast.error(error.message);
