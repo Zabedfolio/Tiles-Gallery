@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from '@/assets/logo.png'
+import { Heart } from "@gravity-ui/icons";
+import { ToggleButton } from "@heroui/react";
+import { CiFacebook } from "react-icons/ci";
+import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -93,7 +97,7 @@ const Footer = () => {
                   href="/contact"
                   className="hover:text-black dark:hover:text-white transition"
                 >
-                  Contact
+                  Contact Us
                 </Link>
               </li>
               <li>
@@ -110,20 +114,22 @@ const Footer = () => {
           {/* CTA Block */}
           <div className="space-y-4">
             <h3 className="text-sm font-semibold text-black dark:text-white">
-              Buy Now
+              Social Media
             </h3>
 
-            
+            <div className="flex gap-3">
+              <ToggleButton>
+                <FaFacebook />
+              </ToggleButton>
 
-            <Link
-              href="/signup"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
-              bg-black text-white dark:bg-white dark:text-black 
-              text-sm font-medium transition-all duration-200 
-              hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10"
-            >
-              Get Started
-            </Link>
+              <ToggleButton>
+                <FaGithub />
+              </ToggleButton>
+
+              <ToggleButton>
+                <FaTwitter />
+              </ToggleButton>
+            </div>
           </div>
         </div>
 
