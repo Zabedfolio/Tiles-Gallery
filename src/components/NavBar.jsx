@@ -53,7 +53,7 @@ const NavBar = () => {
                             :
                             user ? (<div className='flex gap-2 items-center'>
                                 <h2>Hello, <span className='text-[#5a00ff] font-bold'>{user.name}</span></h2>
-                                <Image alt='user' src={user.image || <FaUserCircle />} width={40} height={40}></Image>
+                                <Image alt='user' src={user.image || <FaUserCircle />} width={40} height={40} className='rounded-full' href='/profile'></Image>
                                 <button className='btn bg-[#5a00ff] text-white rounded-lg' onClick={async () => await authClient.signOut()}>Logout</button>
                             </div>) : (
                                 <>
@@ -95,7 +95,7 @@ const NavBar = () => {
                             :
                             user ? (<div className='flex gap-2 items-center'>
                                 <h2>Hello, <span className='text-[#5a00ff] font-bold'>{user.name}</span></h2>
-                                <Image alt='user' src={user.image || <FaUserCircle />} width={40} height={40}></Image>
+                                <Image alt='user' src={user.image || <FaUserCircle />} width={40} height={40} className='rounded-full' href='/profile'></Image>
                                 <button className='btn bg-[#5a00ff] text-white rounded-lg' onClick={async () => await authClient.signOut()}>Logout</button>
                             </div>) : (
                                 <>
