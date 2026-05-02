@@ -3,12 +3,15 @@ import { UpdateUserModal } from '@/components/UpdateUserModal';
 import { authClient } from '@/lib/auth-client';
 import { Card } from '@heroui/react';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 
 const ProfilePage = () => {
     const { data: session, isPending } = authClient.useSession()
     const user = session?.user;
+
+    
     // console.log(user, "user")
     return (
         <div className='mt-10'>
