@@ -3,11 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@/assets/logo.png'
 import { useState } from 'react';
+import { authClient } from '@/lib/auth-client';
+import { FaUserCircle } from 'react-icons/fa';
 
 
 
 
 const NavBar = () => {
+
+    const { data: session, isPending } = authClient.useSession()
+    const user = session?.user;
+
+    // console.log(user,"session")
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -41,12 +48,24 @@ const NavBar = () => {
                 {/* Desktop Buttons */}
                 <div className="hidden md:flex gap-4">
                     <div className="flex items-center  text-sm gap-4">
-                        <button className='btn bg-[#5a00ff]  text-white rounded-lg'>
-                            <Link href={"/signup"}>SignUp</Link>
-                        </button>
-                        <button className='btn bg-[#5a00ff]  text-white rounded-lg'>
-                            <Link href={"/signin"}>SignIn</Link>
-                        </button>
+                        {isPending ?
+                            (<span className="loading loading-ring loading-xl"></span>)
+                            :
+                            user ? (<div className='flex gap-2 items-center'>
+                                <h2>Hello, <span className='text-[#5a00ff] font-bold'>{user.name}</span></h2>
+                                <Image alt='user' src={user.image || <FaUserCircle />} width={40} height={40}></Image>
+                                <button className='btn bg-[#5a00ff] text-white rounded-lg' onClick={async () => await authClient.signOut()}>Logout</button>
+                            </div>) : (
+                                <>
+                                    <button className='btn bg-[#5a00ff] text-white rounded-lg'>
+                                        <Link href={"/signup"} onClick={() => setMenuOpen(false)}>SignUp</Link>
+                                    </button>
+                                    <button className='btn bg-[#5a00ff] text-white rounded-lg'>
+                                        <Link href={"/signin"} onClick={() => setMenuOpen(false)}>SignIn</Link>
+                                    </button>
+                                </>
+
+                            )}
                     </div>
                 </div>
 
@@ -71,12 +90,24 @@ const NavBar = () => {
                         <li><Link href={"/profile"} onClick={() => setMenuOpen(false)}>Profile</Link></li>
                     </ul>
                     <div className="flex gap-3">
-                        <button className='btn bg-[#5a00ff] text-white rounded-lg'>
-                            <Link href={"/signup"} onClick={() => setMenuOpen(false)}>SignUp</Link>
-                        </button>
-                        <button className='btn bg-[#5a00ff] text-white rounded-lg'>
-                            <Link href={"/signin"} onClick={() => setMenuOpen(false)}>SignIn</Link>
-                        </button>
+                        {isPending ?
+                            (<span className="loading loading-ring loading-xl"></span>)
+                            :
+                            user ? (<div className='flex gap-2 items-center'>
+                                <h2>Hello, <span className='text-[#5a00ff] font-bold'>{user.name}</span></h2>
+                                <Image alt='user' src={user.image || <FaUserCircle />} width={40} height={40}></Image>
+                                <button className='btn bg-[#5a00ff] text-white rounded-lg' onClick={async () => await authClient.signOut()}>Logout</button>
+                            </div>) : (
+                                <>
+                                    <button className='btn bg-[#5a00ff] text-white rounded-lg'>
+                                        <Link href={"/signup"} onClick={() => setMenuOpen(false)}>SignUp</Link>
+                                    </button>
+                                    <button className='btn bg-[#5a00ff] text-white rounded-lg'>
+                                        <Link href={"/signin"} onClick={() => setMenuOpen(false)}>SignIn</Link>
+                                    </button>
+                                </>
+
+                            )}
                     </div>
                 </div>
             )}
