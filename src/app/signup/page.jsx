@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { toast } from "react-toastify";
+import { Icon } from "@iconify/react";
 
 import {
     Button,
@@ -27,11 +28,10 @@ export default function SignUpPage() {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        // console.log({name,image,email,password})
         const { data, error } = await authClient.signUp.email({
-            name: name, // required
-            email: email, // required
-            password: password, // required
+            name: name,
+            email: email,
+            password: password,
             image: image,
             callbackURL: '/',
         });
@@ -39,7 +39,7 @@ export default function SignUpPage() {
         if(!error){
             router.push('/');
         }
-        // console.log({data,error})
+
         if (error) {
             toast.error(error.message);
             return;
@@ -48,8 +48,6 @@ export default function SignUpPage() {
         if (data) {
             toast.success("SignUp Successful");
         }
-
-
     };
 
     return (
@@ -77,7 +75,6 @@ export default function SignUpPage() {
                         if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
                             return "Please enter a valid email address";
                         }
-
                         return null;
                     }}
                 >
@@ -101,7 +98,6 @@ export default function SignUpPage() {
                         if (!/[0-9]/.test(value)) {
                             return "Password must contain at least one number";
                         }
-
                         return null;
                     }}
                 >
@@ -122,6 +118,17 @@ export default function SignUpPage() {
                         Reset
                     </Button>
                 </div>
+
+                <div className="flex items-center gap-2 my-2">
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                    <span className="text-sm text-gray-500">or</span>
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                </div>
+
+                <Button className="w-full" variant="tertiary">
+                    <Icon icon="devicon:google" />
+                    Sign up with Google
+                </Button>
             </Form>
         </Card>
     );

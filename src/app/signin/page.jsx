@@ -2,6 +2,8 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { toast } from "react-toastify";
+import { Icon } from "@iconify/react";
+
 
 import {
     Button,
@@ -19,17 +21,15 @@ export default function SignInPage() {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        // console.log({name,image,email,password})
         const { data, error } = await authClient.signIn.email({
-            email: email, // required
-            password: password, // required
+            email: email,
+            password: password,
             callbackURL: '/',
         });
-        // console.log({data,error})
+
         if (error) {
             toast.error(error.message);
             return;
@@ -39,10 +39,14 @@ export default function SignInPage() {
             toast.success("SignIn Successful");
         }
 
-        console.log({data,error})
-
-
+        console.log({ data, error })
     };
+
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
 
     return (
         <Card className="mx-auto w-125 py-10 mt-15">
@@ -103,6 +107,18 @@ export default function SignInPage() {
                         Reset
                     </Button>
                 </div>
+
+                <div className="flex items-center gap-2 my-2">
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                    <span className="text-sm text-gray-500">or</span>
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                </div>
+
+                <Button className="w-full" variant="tertiary" onClick={handleGoogleSignIn}>
+                    <Icon icon="devicon:google" />
+                    Sign in with Google
+                </Button>
+
                 <p className="text-center pt-3">
                     Don’t have an account?{' '}
                     <Link href="/signup" className="font-bold text-[#5a00ff]">
