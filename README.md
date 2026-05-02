@@ -1,4 +1,4 @@
-# 🧱 Tiles Gallery
+# Tiles Gallery
 
 > A modern, responsive tile showcase gallery web application built with Next.js — discover, explore, and get inspired by beautiful tile designs from around the world.
 
