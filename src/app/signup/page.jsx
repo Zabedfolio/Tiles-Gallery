@@ -60,13 +60,13 @@ export default function SignUpPage() {
             <Form className="flex w-full max-w-md mx-auto flex-col gap-4" onSubmit={onSubmit}>
                 <TextField isRequired name="name" type="text">
                     <Label>Name</Label>
-                    <Input placeholder="Enter your name" />
+                    <Input placeholder="Enter your name" className="w-full"/>
                     <FieldError />
                 </TextField>
 
                 <TextField isRequired name="image" type="text">
                     <Label>Image URL</Label>
-                    <Input placeholder="Image URL" />
+                    <Input placeholder="Image URL" className="w-full"/>
                     <FieldError />
                 </TextField>
 
@@ -82,7 +82,7 @@ export default function SignUpPage() {
                     }}
                 >
                     <Label>Email</Label>
-                    <Input placeholder="john@example.com" />
+                    <Input placeholder="john@example.com" className="w-full"/>
                     <FieldError />
                 </TextField>
 
@@ -105,7 +105,7 @@ export default function SignUpPage() {
                     }}
                 >
                     <Label>Password</Label>
-                    <Input placeholder="Enter your password" />
+                    <Input placeholder="Enter your password" className="w-full"/>
                     <Description>
                         Must be at least 8 characters with 1 uppercase and 1 number
                     </Description>

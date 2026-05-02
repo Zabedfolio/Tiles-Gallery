@@ -66,7 +66,7 @@ export default function SignInPage() {
                     }}
                 >
                     <Label>Email</Label>
-                    <Input placeholder="john@example.com" />
+                    <Input placeholder="john@example.com" className="w-full"/>
                     <FieldError />
                 </TextField>
 
@@ -90,7 +90,7 @@ export default function SignInPage() {
                     }}
                 >
                     <Label>Password</Label>
-                    <Input placeholder="Enter your password" />
+                    <Input placeholder="Enter your password" className="w-full"/>
                     <Description>
                         Must be at least 8 characters with 1 uppercase and 1 number
                     </Description>
