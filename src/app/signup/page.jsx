@@ -54,10 +54,10 @@ export default function SignUpPage() {
     }
 
     return (
-        <Card className="mx-auto w-125 py-10 mt-15">
+        <Card className="mx-auto w-full sm:w-96 md:w-125 py-8 sm:py-10 mt-10 sm:mt-15 px-4">
             <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
-            <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+            <Form className="flex w-full max-w-md mx-auto flex-col gap-4" onSubmit={onSubmit}>
                 <TextField isRequired name="name" type="text">
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
@@ -112,12 +112,12 @@ export default function SignUpPage() {
                     <FieldError />
                 </TextField>
 
-                <div className="flex gap-2">
-                    <Button type="submit" className="bg-[#5a00ff]">
+                <div className="flex flex-col sm:flex-row gap-2">
+                    <Button type="submit" className="bg-[#5a00ff] w-full">
                         <Check />
                         Submit
                     </Button>
-                    <Button type="reset" variant="secondary">
+                    <Button type="reset" variant="secondary" className="w-full">
                         Reset
                     </Button>
                 </div>
