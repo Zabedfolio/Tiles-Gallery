@@ -36,10 +36,6 @@ export default function SignUpPage() {
             callbackURL: '/',
         });
 
-        if(!error){
-            router.push('/');
-        }
-
         if (error) {
             toast.error(error.message);
             return;
@@ -47,8 +43,15 @@ export default function SignUpPage() {
 
         if (data) {
             toast.success("SignUp Successful");
+            router.push('/signin');
         }
     };
+
+    const handleGoogleSignUp = async () => {
+        authClient.signIn.social({
+            provider: "google",
+        });
+    }
 
     return (
         <Card className="mx-auto w-125 py-10 mt-15">
@@ -125,7 +128,7 @@ export default function SignUpPage() {
                     <div className="flex-1 h-px bg-gray-300"></div>
                 </div>
 
-                <Button className="w-full" variant="tertiary">
+                <Button className="w-full" variant="tertiary" onClick={handleGoogleSignUp}>
                     <Icon icon="devicon:google" />
                     Sign up with Google
                 </Button>
