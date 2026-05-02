@@ -3,6 +3,7 @@ import { HiArrowUpRight } from "react-icons/hi2";
 
 import Link from 'next/link';
 import React from 'react';
+import LatestTiles from '@/components/LatestTiles';
 
 const TopTiles = async () => {
     const res = await fetch('https://tiles-gallery-zabedfolio.vercel.app/data/products.json')
@@ -13,6 +14,8 @@ const TopTiles = async () => {
     return (
         <div className='container mx-auto mt-10'>
             <h2 className='font-bold text-2xl'>Top Tiles</h2>
+
+            <LatestTiles data={data}></LatestTiles>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 container mx-auto mt-5'>
                 {
